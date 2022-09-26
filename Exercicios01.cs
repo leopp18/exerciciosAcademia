@@ -47,9 +47,8 @@
 
 
             EXERCICIO 6
-            int idp1, quantp1, valorp1;
-            int idp2, quantp2, valorp2;
-            float ipip1, ipip2;
+            int idp1, quantp1, idp2, quantp2;
+            float valorp1, valorp2, totalp1, totalp2, ipip1, ipip2;
             Console.WriteLine("Insira o código do parafuso 1:");
             idp1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Insira a quantidade de parafuso 1:");
@@ -67,17 +66,24 @@
             Console.WriteLine("Insira o IPI do parafuso 2:");
             ipip2 = float.Parse(Console.ReadLine());
 
+            totalp1 = valorp1 * quantp1;
+            totalp1 = totalp1 + (totalp1 * (ipip1 / 100));
+            totalp2 = valorp2 * quantp2;
+            totalp2 = totalp2 + (totalp2 * (ipip2 / 100));
+
             Console.WriteLine("DADOS DOS PARAFUSOS:\n");
             Console.WriteLine("PARAFUSO 1:\n");
             Console.WriteLine("\nCódigo: " + idp1);
             Console.WriteLine("\nQuantidade: " + quantp1);
             Console.WriteLine("\nValor: " + valorp1);
             Console.WriteLine("\nIPI: " + ipip1 + "%\n");
+            Console.WriteLine("\nTotal: " + totalp1);
             Console.WriteLine("PARAFUSO 2:\n");
             Console.WriteLine("\nCódigo: " + idp2);
             Console.WriteLine("\nQuantidade: " + quantp2);
             Console.WriteLine("\nValor: " + valorp2);
-            Console.WriteLine("\nIPI: " + ipip2 + "%\n"); 
+            Console.WriteLine("\nIPI: " + ipip2 + "%\n");
+            Console.WriteLine("\nTotal: " + totalp2); 
 
             EXERCÍCIO 7
             int num;
