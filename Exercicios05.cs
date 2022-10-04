@@ -316,7 +316,199 @@
                     Console.Write("Matriz B[" + i + "," + j + "] = " + matriz2[i, j] + "\t");
                 }
                 Console.WriteLine();
-            }*/
+            }
+            
+            EXERCICIO 12
+            int[,] matriz = new int[4, 3];
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.WriteLine("Insira um valor na matriz [" + i + "," + j + "]: ");
+                    matriz[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if((i+j) % 2 == 0)
+                    {
+                        Console.WriteLine("[" + i + "," + j + "] = " + matriz[i, j]);
+                    }
+
+                }
+            }
+
+            EXERCICIO 13
+            int[,] matriz = new int[5, 5];
+            int somaP = 0, somaS = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    Console.WriteLine("Insira um valor na matriz [" + i + "," + j + "]: ");
+                    matriz[i, j] = int.Parse(Console.ReadLine());
+                    if ((i + j) == 4)
+                    {
+                        somaS += matriz[i, j];
+                    }
+                }
+            }
+            for(int i = 0; i < 5; i++)
+            {
+                somaP += matriz[i, i];
+            }
+            Console.WriteLine("Soma da diagonal principal: " + somaP);
+            Console.WriteLine("Soma da diagonal secundária: " + somaS);
+            if(somaP == somaS)
+            {
+                Console.WriteLine("As somas são iguais.");
+            }
+            else
+            {
+                Console.WriteLine("As somas são diferentes.");
+            }
+
+            EXERCICIO 14
+            int[,] matriz = new int[5, 5];
+            int[] diagP = new int[5];
+            int[] diagS = new int[5];
+            int iguais = 0, ind = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    Console.WriteLine("Insira um valor na matriz [" + i + "," + j + "]: ");
+                    matriz[i, j] = int.Parse(Console.ReadLine());
+                    if((i+j) == 4)
+                    {
+                        diagS[ind] = matriz[i, j];
+                        ind++;
+                    }
+                }
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                diagP[i] = matriz[i, i];
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (diagP[i] == diagS[j])
+                    {
+                        iguais++;
+                        break;
+                    }
+                }
+            }
+            if(iguais == 5)
+            {
+                Console.WriteLine("As duas diagonais contém os mesmos elementos.");
+            }
+            else
+            {
+                Console.WriteLine("As diagonais contém elementos diferentes.");
+            }
+            
+            EXERCICIO 15
+            double[,] matriz1 = new double[4, 4];
+            double[,] matriz2 = new double[4, 4];
+            double soma;
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.WriteLine("Insira um valor na primeira matriz [" + i + "," + j + "]: ");
+                    matriz1[i, j] = double.Parse(Console.ReadLine());
+                }
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.WriteLine("Insira um valor na segunda matriz [" + i + "," + j + "]: ");
+                    matriz2[i, j] = double.Parse(Console.ReadLine());
+                }
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    soma = 0;
+                    soma = matriz1[i, j] + matriz2[i, j];
+                    Console.Write("Soma das posições[" + i + "," + j + "] = " + soma + "\t");
+                }
+                Console.WriteLine();
+            }
+
+            EXERCICIO 16
+            int[,] matriz = new int[3, 4];
+            int[,] matriz2 = new int[4, 3];
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.WriteLine("Insira um valor na matriz [" + i + "," + j + "]: ");
+                    matriz[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    matriz2[i, j] = matriz[j, i];
+                }
+            }
+            Console.WriteLine("MATRIZ NORMAL:");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write("[" + i + "," + j + "] = " + matriz[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("MATRIZ TRANSPOSTA:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write("[" + i + "," + j + "] = " + matriz2[i,j] + "\t");
+                }
+                Console.WriteLine();
+            }
+
+            EXERCICIO 17
+            Random rd = new Random();
+            int[,] matriz = new int[10, 10];
+            int maior = -1, menor = 201;
+            int linha = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    matriz[i, j] = rd.Next(0, 200);
+                    Console.Write("[" + i + "," + j + "] = " + matriz[i, j] + "\t");
+                    if (maior < matriz[i, j])
+                    {
+                        maior = matriz[i, j];
+                        linha = i;
+                    }
+                }
+                Console.WriteLine();
+            }
+            for(int i = 0; i < 10; i++)
+            {
+                if(menor > matriz[linha, i])
+                {
+                    menor = matriz[linha, i];
+                } 
+            }
+            Console.WriteLine("Maior elemento: " + maior);
+            Console.WriteLine("Linha: " + linha);
+            Console.WriteLine("Elemento minimax: " + menor);*/
         }
     }
 }
