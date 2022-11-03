@@ -1,0 +1,134 @@
+*{
+    font-family: arial;
+    font-size: 12pt;
+}
+
+/*EXERCICIO 1*/
+#a1, #a2, #a3, #a4{
+    border: 2px solid black;
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+}
+#a1{
+    background-color: blue;
+}
+
+#a2{
+    background-color: red;
+}
+
+#a3{
+    background-color: green;
+}
+
+#a4{
+    background-color: purple;
+}
+
+/*EXERCICIO 2*/
+
+#b1, #b2, #b3, #b4{
+    width: fit-content;
+    margin: 20px;
+    padding: 10px;
+}
+
+#b1{
+    background-color: blue;
+    top:35%;
+    left: 2%;
+    position: absolute;
+}
+
+#b2{
+    background-color: red;
+    top:45%;
+    left:2%;
+    position: absolute;
+}
+
+#b3{
+    left: 35%;
+    top: 35%;
+    background-color: purple;
+    position: absolute;
+}
+
+#b4{
+    background-color: green;
+    top:45%;
+    left:35%;
+    position: absolute;
+}
+
+/*EXERCICIO 3*/
+
+#c1, #c2, #c3, #c4{
+    width: fit-content;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#c1{
+    background-color: blue;
+    top:60%;
+    left: 2%;
+    position: absolute;
+}
+
+#c2{
+    background-color: red;
+    top:70%;
+    left:2%;
+    position: absolute;
+}
+
+#c3{
+    left: 35%;
+    top: 60%;
+    background-color: purple;
+    position: absolute;
+}
+
+#c4{
+    background-color: green;
+    top:70%;
+    left:35%;
+    position: absolute;
+}
+
+/*EXERCICIO 4*/
+
+table{
+    border: 1px solid green;
+    position: absolute;
+    top:80%;
+    left: 3%;
+    width: 80px;
+    height: 90px;
+}
+
+td{
+    background-color: gray;
+    color: yellow;
+}
+
+#d1:hover{
+    background-color: yellow;
+    color: gray;
+    width: fit-content;
+}
+
+/*EXERCICIO 5*/
+#e{
+    display: flex;
+    position: absolute;
+    width: 750px;
+    height: 220px;
+    top: 80%;
+    left: 30%;
+    padding: 10px;
+    background-color:darkseagreen;
+}

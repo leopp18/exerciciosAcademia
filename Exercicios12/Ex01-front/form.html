@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Formulário</title>
+</head>
+<body>
+    <h1 class="titulo">FORMULÁRIO</h1>
+    <div id = 'menu'>
+        <h2>Menu de páginas</h2>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Principal</a>
+                </li>
+                <li>
+                    <a href="produto.html">Produto</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <form name = "contato" action = "done.html" method = "get">
+        <h1 class ="labelForm">Nome:</h1> <input type="text" name ="nome"/>
+        <br>
+        <h1 class ="labelForm">Celular:</h1><input type="tel" name ="telefone"/>
+        <br>
+        <h1 class ="labelForm">Data de nascimento:</h1> <input type = "date" name = "datanasc"/>
+        <br>
+        <h1 class ="labelForm">Senha:</h1> <input type="password" name ="senha"/>
+        <br>
+        <h1 class ="labelForm">Sexo:</h1> 
+        Masculino <input type="radio" name="sexo" value="masculino">
+        <br>
+        Feminino <input type="radio" name="sexo" value="feminino">
+        <br>
+        Prefiro não informar <input type="radio" name="sexo" value="ninf">
+        <br>
+        <br>
+        <input type="submit" value="Enviar mensagem">
+    </form>
+</body>
+</html>
