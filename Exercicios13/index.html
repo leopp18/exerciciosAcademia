@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changeColor('red')">Botão 1</button>
+    <button onclick="changeColor('green')">Botão 2</button>
+    <button onclick="changeColor('blue')">Botão 3</button>
+    <button onclick="changeColor('yellow')">Botão 4</button>
+    <button onclick="changeColor('white')">Reset</button>
+    <br><br>
+    <div id = e2>
+    <a onmouseover="changeColor('orange')" onmouseout="changeColor('white')">Laranja | </a>
+    <a onmouseover="changeColor('purple')" onmouseout="changeColor('white')">Roxo | </a>
+    <a onmouseover="changeColor('gray')" onmouseout="changeColor('white')">Cinza | </a>
+    <a onmouseover="changeColor('brown')" onmouseout="changeColor('white')">Marrom</a>
+    </div>
+    <br><br>
+    <input type="radio" name="e3" onclick="changeColor('red')">Vermelho
+    <input type="radio" name="e3" onclick="changeColor('green')">Verde
+    <input type="radio" name="e3" onclick="changeColor('blue')">Azul
+    <input type="radio" name="e3" onclick="changeColor('yellow')">Amarelo
+    <br><br>
+    <p id="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. A corporis laudantium officiis quidem quis corrupti, vel pariatur, quam placeat, perspiciatis repellat. Quis officiis quisquam velit quo dolor! Sequi, vitae recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eveniet optio assumenda deserunt, eos accusamus iste voluptates excepturi dolore. Porro placeat fugit sint recusandae fugiat, distinctio minus natus? Praesentium, atque.</p>
+    <button onclick="hideText('none')">Ocultar</button>
+    <button onclick="hideText('block')">Exibir</button>
+    <br><br>
+    <input type="checkbox" id="box1" onclick="habilitaBotao()">Checkbox 1
+    <input type="checkbox" id="box2" onclick="habilitaBotao()">Checkbox 2
+    <input type="checkbox" id="box3" onclick="habilitaBotao()" disabled>Checkbox 3
+    <input type="checkbox" id="box4" onclick="habilitaBotao()" disabled>Checkbox 4
+    <br><br>
+    <p id="paragrafo2">Lorem ipsum dolor sit amet consectetur adipisicing elit. A corporis laudantium officiis quidem quis corrupti, vel pariatur, quam placeat, perspiciatis repellat. Quis officiis quisquam velit quo dolor! Sequi, vitae recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eveniet optio assumenda deserunt, eos accusamus iste voluptates excepturi dolore. Porro placeat fugit sint recusandae fugiat, distinctio minus natus? Praesentium, atque.</p>
+    <button onclick="changeFont('white')">Fonte branca</button>
+    <button onclick="changeFont('black')">Fonte preta</button>
+    <button onclick="changeBack('white')">Fundo branco</button>
+    <button onclick="changeBack('black')">Fundo preto</button>
+    <button onclick="sizeFont('up')">Aumenta fonte</button>
+    <button onclick="sizeFont('down')">Diminui fonte</button>
+    <button onclick="fontType('uppercase')">Texto maiúsculo</button>
+    <button onclick="fontType('lowercase')">Texto minúsculo</button>
+    <br><br>
+    <form name = "contato"  method = "get">
+        <h4 class ="labelForm">Login:</h4>
+        <input type="text" name ="nome"/>
+        <br>
+        <h4 class ="labelForm">Senha:</h4>
+        <input type="password" name ="senha" id="senha1" required size="6" maxlength="10"/>
+        <br>
+        <h4 class ="labelForm">Confirmar senha:</h4>
+        <input type="password" name ="senha" id="senha2" required size="6" maxlength="10"/>
+        <br>
+        <br>
+        <input type="submit" value="Enviar mensagem" onclick="verify('senha1', 'senha2')">
+    </form>
+    _________________________________
+    <br><br><br>
+    <form name = "contato" action = "done.html" method = "get">
+        <h4 class ="labelForm">Nome:</h4> <input type="text" name ="nome"/>
+        <br>
+        <h4 class ="labelForm">Pessoa física:</h4>
+        <input type="radio" name ="pessoa" id="fisica" onclick="formulario()"/>
+        <br>
+        <h4 class ="labelForm">Pessoa jurídica:</h4>
+        <input type="radio" name ="pessoa" id = "juridica" onclick="formulario()"/>
+        <br>
+        <h4 class ="labelForm">CPF:</h4>
+        <input type="text" name ="cpf" id="cpf" disabled/>
+        <br>
+        <h4 class ="labelForm">CNPJ:</h4>
+        <input type="text" name ="cnpj" id="cnpj" disabled/>
+        <br>
+        <h4 class ="labelForm">Data de nascimento:</h4>
+        <input type = "date" name = "datanasc" id="data" disabled/>
+        <br>
+        <h4 class ="labelForm">Endereço:</h4>
+        <input type="text" name ="endereco"/>
+        <br>
+        <h4 class ="labelForm">CEP:</h4>
+        <input type="text" name ="cep"/>
+        <br>
+        <h4 class ="labelForm">Telefone:</h4>
+        <input type="text" name ="tel"/>
+        <br>
+        <h4 class ="labelForm">Email:</h4>
+        <input type="text" name ="email"/>
+        <br>
+        <br>
+        <input type="submit" value="Enviar mensagem">
+    </form>
+</body>
+</html>
